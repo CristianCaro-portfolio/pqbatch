@@ -1,0 +1,1123 @@
+{
+ "dataset": {
+  "source": "https://data.gharchive.org/2026-10-01-15.json.gz",
+  "events": 85569,
+  "payload_bytes": 89282273,
+  "mean_event_bytes": 1043.3950729820378,
+  "median_event_bytes": 627,
+  "duration_s": 3600.0,
+  "events_per_s": 23.769166666666667,
+  "event_types": 16,
+  "tenants": 43149,
+  "tenants_with_one_event": 31672
+ },
+ "per_event": [
+  {
+   "label": "ed25519/event (today)",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 64.0,
+   "overhead_pct_of_payload": 6.133822332233858,
+   "bytes_by_record": {
+    "signature": 5476416
+   },
+   "records": {
+    "signature": 85569
+   },
+   "pq_signatures": 0,
+   "sign_cpu_s": 3.978300324,
+   "sign_events_per_core_s": 21508.934225952118,
+   "sign_cores_needed": 0.0011050834233333334,
+   "wait_ms_p50": 0.0,
+   "wait_ms_p99": 0.0,
+   "wait_ms_max": 0.0,
+   "verify_cpu_s": 11.19259465,
+   "verify_events_per_core_s": 7645.144193620913
+  },
+  {
+   "label": "mldsa44/event",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 2420.0,
+   "overhead_pct_of_payload": 231.93515693759275,
+   "bytes_by_record": {
+    "signature": 207076980
+   },
+   "records": {
+    "signature": 85569
+   },
+   "pq_signatures": 85569,
+   "sign_cpu_s": 62.868846401,
+   "sign_events_per_core_s": 1361.0715783491603,
+   "sign_cores_needed": 0.017463568444722223,
+   "wait_ms_p50": 0.0,
+   "wait_ms_p99": 0.0,
+   "wait_ms_max": 0.0,
+   "pq_wait_ms_p50": 0.0,
+   "pq_wait_ms_p99": 0.0,
+   "verify_cpu_s": 12.443419345999999,
+   "verify_events_per_core_s": 6876.646813924711
+  },
+  {
+   "label": "mldsa65/event (direct swap)",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 3309.0,
+   "overhead_pct_of_payload": 317.1377827712787,
+   "bytes_by_record": {
+    "signature": 283147821
+   },
+   "records": {
+    "signature": 85569
+   },
+   "pq_signatures": 85569,
+   "sign_cpu_s": 101.625892437,
+   "sign_events_per_core_s": 841.9999859095554,
+   "sign_cores_needed": 0.028229414565833333,
+   "wait_ms_p50": 0.0,
+   "wait_ms_p99": 0.0,
+   "wait_ms_max": 0.0,
+   "pq_wait_ms_p50": 0.0,
+   "pq_wait_ms_p99": 0.0,
+   "verify_cpu_s": 19.403108193999998,
+   "verify_events_per_core_s": 4410.066631822442
+  }
+ ],
+ "batched": [
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 275.1042550456357,
+   "overhead_pct_of_payload": 26.36625973892936,
+   "bytes_by_record": {
+    "ProofAttach": 22416806,
+    "BatchHeader": 1123590
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 335
+   },
+   "pq_signatures": 335,
+   "sign_cpu_s": 1.1158772549999867,
+   "sign_events_per_core_s": 76683.16530029193,
+   "sign_cores_needed": 0.00030996590416666297,
+   "wait_ms_p50": 4987.5,
+   "wait_ms_p99": 20386.363636363298,
+   "wait_ms_max": 38829.05982905952,
+   "pq_wait_ms_p50": 4987.5,
+   "pq_wait_ms_p99": 20386.363636363298,
+   "verify_cpu_s": 1.5389118639999992,
+   "verify_events_per_core_s": 55603.574188833496,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 1111.3559116035012,
+   "overhead_pct_of_payload": 106.51343296333864,
+   "bytes_by_record": {
+    "Seal": 95097614
+   },
+   "records": {
+    "Seal": 28618
+   },
+   "pq_signatures": 28618,
+   "sign_cpu_s": 34.740855976000006,
+   "sign_events_per_core_s": 2463.065390763934,
+   "sign_cores_needed": 0.009650237771111113,
+   "wait_ms_p50": 61.53846153838094,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000000728,
+   "pq_wait_ms_p50": 61.53846153838094,
+   "pq_wait_ms_p99": 100.0,
+   "verify_cpu_s": 7.03567228899999,
+   "verify_events_per_core_s": 12162.163967441167,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 40.22574764225362,
+   "overhead_pct_of_payload": 3.8552748315446674,
+   "bytes_by_record": {
+    "Seal": 2232204,
+    "Checkpoint": 1200591,
+    "Anchor": 9282
+   },
+   "records": {
+    "Seal": 28618,
+    "Checkpoint": 357,
+    "Anchor": 357
+   },
+   "pq_signatures": 357,
+   "sign_cpu_s": 2.30743314099999,
+   "sign_events_per_core_s": 37084.06474690587,
+   "sign_cores_needed": 0.000640953650277775,
+   "wait_ms_p50": 61.53846153838094,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000000728,
+   "pq_wait_ms_p50": 5127.72002772009,
+   "pq_wait_ms_p99": 10025.0,
+   "overhead_bytes_per_event_single_stream_reader": 54.256424639764404,
+   "verify_cpu_s": 4.4021067790000075,
+   "verify_events_per_core_s": 19438.192732671072,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 18.821360539447696,
+   "overhead_pct_of_payload": 1.8038575249982716,
+   "bytes_by_record": {
+    "Seal": 400652,
+    "Checkpoint": 1200591,
+    "Anchor": 9282
+   },
+   "records": {
+    "Seal": 28618,
+    "Checkpoint": 357,
+    "Anchor": 357
+   },
+   "pq_signatures": 357,
+   "sign_cpu_s": 1.3305436130000317,
+   "sign_events_per_core_s": 64311.30792252953,
+   "sign_cores_needed": 0.00036959544805556434,
+   "wait_ms_p50": 61.53846153838094,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000000728,
+   "pq_wait_ms_p50": 5127.72002772009,
+   "pq_wait_ms_p99": 10025.0,
+   "overhead_bytes_per_event_single_stream_reader": 32.85203753695848,
+   "verify_cpu_s": 0.6512161830000309,
+   "verify_events_per_core_s": 131398.76163058425,
+   "partition": "firehose"
+  },
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 275.1042550456357,
+   "overhead_pct_of_payload": 26.36625973892936,
+   "bytes_by_record": {
+    "ProofAttach": 22416806,
+    "BatchHeader": 1123590
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 335
+   },
+   "pq_signatures": 335,
+   "sign_cpu_s": 1.1729724900000065,
+   "sign_events_per_core_s": 72950.55999139376,
+   "sign_cores_needed": 0.032582569166666846,
+   "wait_ms_p50": 49.875,
+   "wait_ms_p99": 203.8636363636324,
+   "wait_ms_max": 388.29059829059406,
+   "pq_wait_ms_p50": 49.875,
+   "pq_wait_ms_p99": 203.8636363636324,
+   "verify_cpu_s": 1.5048470369999905,
+   "verify_events_per_core_s": 56862.25768871985,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 13.941462445511808,
+   "overhead_pct_of_payload": 1.3361633389418748,
+   "bytes_by_record": {
+    "Seal": 1192957
+   },
+   "records": {
+    "Seal": 359
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 1.0005005730000107,
+   "sign_events_per_core_s": 85526.18789954364,
+   "sign_cores_needed": 0.02779168258333363,
+   "wait_ms_p50": 50.52727272727273,
+   "wait_ms_p99": 99.28571428571377,
+   "wait_ms_max": 177.01357466062473,
+   "pq_wait_ms_p50": 50.52727272727273,
+   "pq_wait_ms_p99": 99.28571428571377,
+   "verify_cpu_s": 0.5761323979999702,
+   "verify_events_per_core_s": 148523.1524855237,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 0.48566653811543903,
+   "overhead_pct_of_payload": 0.04654675402361228,
+   "bytes_by_record": {
+    "Seal": 28002,
+    "Checkpoint": 13452,
+    "Anchor": 104
+   },
+   "records": {
+    "Seal": 359,
+    "Checkpoint": 4,
+    "Anchor": 4
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 0.6987725889999865,
+   "sign_events_per_core_s": 122456.14860545374,
+   "sign_cores_needed": 0.01941034969444407,
+   "wait_ms_p50": 50.52727272727273,
+   "wait_ms_p99": 99.28571428571377,
+   "wait_ms_max": 177.01357466062473,
+   "pq_wait_ms_p50": 4986.837121212118,
+   "pq_wait_ms_p99": 10009.002192982454,
+   "overhead_bytes_per_event_single_stream_reader": 0.642873003073543,
+   "verify_cpu_s": 0.5417830540000068,
+   "verify_events_per_core_s": 157939.60214931145,
+   "partition": "firehose"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 0.21715808295060127,
+   "overhead_pct_of_payload": 0.02081264216917954,
+   "bytes_by_record": {
+    "Seal": 5026,
+    "Checkpoint": 13452,
+    "Anchor": 104
+   },
+   "records": {
+    "Seal": 359,
+    "Checkpoint": 4,
+    "Anchor": 4
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 0.5499678250000102,
+   "sign_events_per_core_s": 155589.10196246192,
+   "sign_cores_needed": 0.01527688402777806,
+   "wait_ms_p50": 50.52727272727273,
+   "wait_ms_p99": 99.28571428571377,
+   "wait_ms_max": 177.01357466062473,
+   "pq_wait_ms_p50": 4986.837121212118,
+   "pq_wait_ms_p99": 10009.002192982454,
+   "overhead_bytes_per_event_single_stream_reader": 0.37436454790870527,
+   "verify_cpu_s": 0.4914771239999709,
+   "verify_events_per_core_s": 174105.7636692874,
+   "partition": "firehose"
+  },
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 275.0636094847433,
+   "overhead_pct_of_payload": 26.36236422878705,
+   "bytes_by_record": {
+    "ProofAttach": 22383142,
+    "BatchHeader": 1153776
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 344
+   },
+   "pq_signatures": 344,
+   "sign_cpu_s": 1.2969453540000018,
+   "sign_events_per_core_s": 65977.33646686851,
+   "sign_cores_needed": 0.0003602625983333338,
+   "wait_ms_p50": 8360.745614035055,
+   "wait_ms_p99": 933941.176470588,
+   "wait_ms_max": 3592937.2549019605,
+   "pq_wait_ms_p50": 8360.745614035055,
+   "pq_wait_ms_p99": 933941.176470588,
+   "verify_cpu_s": 1.4986627129999874,
+   "verify_events_per_core_s": 57096.90329768064,
+   "partition": "type"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 1585.1714639647537,
+   "overhead_pct_of_payload": 151.92437697010692,
+   "bytes_by_record": {
+    "Seal": 135641537
+   },
+   "records": {
+    "Seal": 40819
+   },
+   "pq_signatures": 40819,
+   "sign_cpu_s": 48.64875067400004,
+   "sign_events_per_core_s": 1758.914644559037,
+   "sign_cores_needed": 0.013513541853888901,
+   "wait_ms_p50": 76.74418604653329,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000023283,
+   "pq_wait_ms_p50": 76.74418604653329,
+   "pq_wait_ms_p99": 100.0,
+   "verify_cpu_s": 9.72044798799999,
+   "verify_events_per_core_s": 8802.989338108282,
+   "partition": "type"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 56.28793137701738,
+   "overhead_pct_of_payload": 5.394690164306189,
+   "bytes_by_record": {
+    "Seal": 3183882,
+    "Checkpoint": 1203954,
+    "Anchor": 428666
+   },
+   "records": {
+    "Seal": 40819,
+    "Checkpoint": 358,
+    "Anchor": 3169
+   },
+   "pq_signatures": 358,
+   "sign_cpu_s": 3.00147931500004,
+   "sign_events_per_core_s": 28508.942098106334,
+   "sign_cores_needed": 0.0008337442541666778,
+   "wait_ms_p50": 76.74418604653329,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000023283,
+   "pq_wait_ms_p50": 5122.212543554022,
+   "pq_wait_ms_p99": 10023.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 180.83475324007526,
+   "verify_cpu_s": 5.986918612000011,
+   "verify_events_per_core_s": 14292.66130802044,
+   "partition": "type"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 25.75799647068448,
+   "overhead_pct_of_payload": 2.4686714685232083,
+   "bytes_by_record": {
+    "Seal": 571466,
+    "Checkpoint": 1203954,
+    "Anchor": 428666
+   },
+   "records": {
+    "Seal": 40819,
+    "Checkpoint": 358,
+    "Anchor": 3169
+   },
+   "pq_signatures": 358,
+   "sign_cpu_s": 1.3311287869999546,
+   "sign_events_per_core_s": 64283.03619881291,
+   "sign_cores_needed": 0.00036975799638887626,
+   "wait_ms_p50": 76.74418604653329,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 100.00000000023283,
+   "pq_wait_ms_p50": 5122.212543554022,
+   "pq_wait_ms_p99": 10023.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 150.30481833374236,
+   "verify_cpu_s": 0.7046871769999825,
+   "verify_events_per_core_s": 121428.34834073066,
+   "partition": "type"
+  },
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 275.0636094847433,
+   "overhead_pct_of_payload": 26.36236422878705,
+   "bytes_by_record": {
+    "ProofAttach": 22383142,
+    "BatchHeader": 1153776
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 344
+   },
+   "pq_signatures": 344,
+   "sign_cpu_s": 1.4284809540000083,
+   "sign_events_per_core_s": 59902.093731380264,
+   "sign_cores_needed": 0.03968002650000023,
+   "wait_ms_p50": 83.60745614035045,
+   "wait_ms_p99": 9339.411764705877,
+   "wait_ms_max": 35929.3725490196,
+   "pq_wait_ms_p50": 83.60745614035045,
+   "pq_wait_ms_p99": 9339.411764705877,
+   "verify_cpu_s": 1.509374632999993,
+   "verify_events_per_core_s": 56691.69080304823,
+   "partition": "type"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 106.9492690109736,
+   "overhead_pct_of_payload": 10.250122104306193,
+   "bytes_by_record": {
+    "Seal": 9151542
+   },
+   "records": {
+    "Seal": 2754
+   },
+   "pq_signatures": 2754,
+   "sign_cpu_s": 3.8941658030000212,
+   "sign_events_per_core_s": 21973.640653430477,
+   "sign_cores_needed": 0.10817127230555615,
+   "wait_ms_p50": 52.17063492063426,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 190.53921568627266,
+   "pq_wait_ms_p50": 52.17063492063426,
+   "pq_wait_ms_p99": 100.0,
+   "verify_cpu_s": 1.1378314250000017,
+   "verify_events_per_core_s": 75203.58299121495,
+   "partition": "type"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 2.7784361158830886,
+   "overhead_pct_of_payload": 0.2662880233795123,
+   "bytes_by_record": {
+    "Seal": 214812,
+    "Checkpoint": 13452,
+    "Anchor": 9484
+   },
+   "records": {
+    "Seal": 2754,
+    "Checkpoint": 4,
+    "Anchor": 62
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 0.6951092310000035,
+   "sign_events_per_core_s": 123101.51582492732,
+   "sign_cores_needed": 0.019308589750000098,
+   "wait_ms_p50": 52.17063492063426,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 190.53921568627266,
+   "pq_wait_ms_p50": 4961.203007518796,
+   "pq_wait_ms_p99": 9981.937963944856,
+   "overhead_bytes_per_event_single_stream_reader": 5.2151363227337,
+   "verify_cpu_s": 0.8642604270000334,
+   "verify_events_per_core_s": 99008.35133343055,
+   "partition": "type"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 0.7186247355934976,
+   "overhead_pct_of_payload": 0.06887369455748511,
+   "bytes_by_record": {
+    "Seal": 38556,
+    "Checkpoint": 13452,
+    "Anchor": 9484
+   },
+   "records": {
+    "Seal": 2754,
+    "Checkpoint": 4,
+    "Anchor": 62
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 0.572500027999979,
+   "sign_events_per_core_s": 149465.49487330878,
+   "sign_cores_needed": 0.015902778555554973,
+   "wait_ms_p50": 52.17063492063426,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 190.53921568627266,
+   "pq_wait_ms_p50": 4961.203007518796,
+   "pq_wait_ms_p99": 9981.937963944856,
+   "overhead_bytes_per_event_single_stream_reader": 3.155324942444109,
+   "verify_cpu_s": 0.49438019699999813,
+   "verify_events_per_core_s": 173083.38909861376,
+   "partition": "type"
+  },
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 1765.7563136182496,
+   "overhead_pct_of_payload": 169.23180483991487,
+   "bytes_by_record": {
+    "ProofAttach": 6368902,
+    "BatchHeader": 144725100
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 43150
+   },
+   "pq_signatures": 43150,
+   "sign_cpu_s": 51.45867034999998,
+   "sign_events_per_core_s": 1662.8684615827824,
+   "sign_cores_needed": 0.014294075097222216,
+   "wait_ms_p50": 2012904.7987616097,
+   "wait_ms_p99": 3575084.22459893,
+   "wait_ms_max": 3599959.7186700767,
+   "pq_wait_ms_p50": 2012904.7987616097,
+   "pq_wait_ms_p99": 3575084.22459893,
+   "verify_cpu_s": 10.88240891800001,
+   "verify_events_per_core_s": 7863.05685117795,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 3317.9127254028913,
+   "overhead_pct_of_payload": 317.99198705436186,
+   "bytes_by_record": {
+    "Seal": 283910474
+   },
+   "records": {
+    "Seal": 85438
+   },
+   "pq_signatures": 85438,
+   "sign_cpu_s": 103.04621201399999,
+   "sign_events_per_core_s": 830.3944252543168,
+   "sign_cores_needed": 0.028623947781666666,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 100.0,
+   "pq_wait_ms_p99": 100.0,
+   "verify_cpu_s": 20.154269416000034,
+   "verify_events_per_core_s": 4245.700910005135,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 370.4810036344938,
+   "overhead_pct_of_payload": 35.507260215026115,
+   "bytes_by_record": {
+    "Seal": 6664164,
+    "Checkpoint": 1207317,
+    "Anchor": 23830208
+   },
+   "records": {
+    "Seal": 85438,
+    "Checkpoint": 359,
+    "Anchor": 82032
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 6.193609837000054,
+   "sign_events_per_core_s": 13815.691051253938,
+   "sign_cores_needed": 0.0017204471769444593,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 5146.875,
+   "pq_wait_ms_p99": 10023.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 3594.4711869952903,
+   "verify_cpu_s": 13.66653929000006,
+   "verify_events_per_core_s": 6261.20469741829,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 306.57898304292445,
+   "overhead_pct_of_payload": 29.38282832472242,
+   "bytes_by_record": {
+    "Seal": 1196132,
+    "Checkpoint": 1207317,
+    "Anchor": 23830208
+   },
+   "records": {
+    "Seal": 85438,
+    "Checkpoint": 359,
+    "Anchor": 82032
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 2.3601083209999842,
+   "sign_events_per_core_s": 36256.3867253958,
+   "sign_cores_needed": 0.0006555856447222179,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 5146.875,
+   "pq_wait_ms_p99": 10023.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 3530.569166403721,
+   "verify_cpu_s": 2.3097446299999547,
+   "verify_events_per_core_s": 37046.95267545732,
+   "partition": "tenant"
+  },
+  {
+   "label": "v1 fixed 256 + proofs",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 1765.7563136182496,
+   "overhead_pct_of_payload": 169.23180483991487,
+   "bytes_by_record": {
+    "ProofAttach": 6368902,
+    "BatchHeader": 144725100
+   },
+   "records": {
+    "ProofAttach": 85569,
+    "BatchHeader": 43150
+   },
+   "pq_signatures": 43150,
+   "sign_cpu_s": 52.423895350000066,
+   "sign_events_per_core_s": 1632.2518467716247,
+   "sign_cores_needed": 1.4562193152777796,
+   "wait_ms_p50": 20129.047987616093,
+   "wait_ms_p99": 35750.8422459893,
+   "wait_ms_max": 35999.59718670076,
+   "pq_wait_ms_p50": 20129.047987616093,
+   "pq_wait_ms_p99": 35750.8422459893,
+   "verify_cpu_s": 10.543635681000069,
+   "verify_events_per_core_s": 8115.701508370378,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 direct 100ms",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 3098.4220687398474,
+   "overhead_pct_of_payload": 296.95578874879226,
+   "bytes_by_record": {
+    "Seal": 265128878
+   },
+   "records": {
+    "Seal": 79786
+   },
+   "pq_signatures": 79786,
+   "sign_cpu_s": 95.93969411700004,
+   "sign_events_per_core_s": 891.9040318770163,
+   "sign_cores_needed": 2.6649915032500013,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 198.87254901960114,
+   "pq_wait_ms_p50": 100.0,
+   "pq_wait_ms_p99": 100.0,
+   "verify_cpu_s": 19.608593305,
+   "verify_events_per_core_s": 4363.852045326512,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 anchored 100ms/10s",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 369.94498007455974,
+   "overhead_pct_of_payload": 35.45588719498662,
+   "bytes_by_record": {
+    "Seal": 6223308,
+    "Checkpoint": 13452,
+    "Anchor": 25419062
+   },
+   "records": {
+    "Seal": 79786,
+    "Checkpoint": 4,
+    "Anchor": 53111
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 5.199751483,
+   "sign_events_per_core_s": 16456.363401166032,
+   "sign_cores_needed": 0.14443754119444444,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 198.87254901960114,
+   "pq_wait_ms_p50": 4997.072463768116,
+   "pq_wait_ms_p99": 10008.792906178489,
+   "overhead_bytes_per_event_single_stream_reader": 2457.293120172025,
+   "verify_cpu_s": 13.211763289000032,
+   "verify_events_per_core_s": 6476.7282101734145,
+   "partition": "tenant"
+  },
+  {
+   "label": "v2 anchored 100ms/10s, pq only",
+   "speed": 100,
+   "events": 85569,
+   "overhead_bytes_per_event": 310.2702847994017,
+   "overhead_pct_of_payload": 29.73660628017389,
+   "bytes_by_record": {
+    "Seal": 1117004,
+    "Checkpoint": 13452,
+    "Anchor": 25419062
+   },
+   "records": {
+    "Seal": 79786,
+    "Checkpoint": 4,
+    "Anchor": 53111
+   },
+   "pq_signatures": 4,
+   "sign_cpu_s": 2.056159268999977,
+   "sign_events_per_core_s": 41615.93962593029,
+   "sign_cores_needed": 0.057115535249999363,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 198.87254901960114,
+   "pq_wait_ms_p50": 4997.072463768116,
+   "pq_wait_ms_p99": 10008.792906178489,
+   "overhead_bytes_per_event_single_stream_reader": 2397.618424896867,
+   "verify_cpu_s": 2.301154293999957,
+   "verify_events_per_core_s": 37185.25099473473,
+   "partition": "tenant"
+  }
+ ],
+ "sweep": [
+  {
+   "label": "anchored 10ms/1s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 398.7881242038589,
+   "overhead_pct_of_payload": 38.220242219863735,
+   "bytes_by_record": {
+    "Seal": 6674382,
+    "Checkpoint": 11605713,
+    "Anchor": 15843806
+   },
+   "records": {
+    "Seal": 85569,
+    "Checkpoint": 3451,
+    "Anchor": 85083
+   },
+   "pq_signatures": 3451,
+   "sign_cpu_s": 9.459494716999984,
+   "sign_events_per_core_s": 9045.831998428097,
+   "sign_cores_needed": 0.0026276374213888847,
+   "wait_ms_p50": 10.0,
+   "wait_ms_p99": 10.0,
+   "wait_ms_max": 10.000000000000014,
+   "pq_wait_ms_p50": 519.8039215686731,
+   "pq_wait_ms_p99": 1010.0,
+   "overhead_bytes_per_event_single_stream_reader": 3742.687538711449,
+   "partition": "tenant",
+   "deadline_ms": 10,
+   "checkpoint_s": 1
+  },
+  {
+   "label": "anchored 10ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 370.60041603851863,
+   "overhead_pct_of_payload": 35.518704816128505,
+   "bytes_by_record": {
+    "Seal": 6674382,
+    "Checkpoint": 1207317,
+    "Anchor": 23830208
+   },
+   "records": {
+    "Seal": 85569,
+    "Checkpoint": 359,
+    "Anchor": 82032
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 5.9752499629998965,
+   "sign_events_per_core_s": 14320.572449665313,
+   "sign_cores_needed": 0.0016597916563888602,
+   "wait_ms_p50": 10.0,
+   "wait_ms_p99": 10.0,
+   "wait_ms_max": 10.000000000000014,
+   "pq_wait_ms_p50": 5056.875,
+   "pq_wait_ms_p99": 9933.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 3594.590599399315,
+   "partition": "tenant",
+   "deadline_ms": 10,
+   "checkpoint_s": 10
+  },
+  {
+   "label": "anchored 10ms/60s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 393.77454451962745,
+   "overhead_pct_of_payload": 37.73973585999541,
+   "bytes_by_record": {
+    "Seal": 6674382,
+    "Checkpoint": 201780,
+    "Anchor": 26818732
+   },
+   "records": {
+    "Seal": 85569,
+    "Checkpoint": 60,
+    "Anchor": 73518
+   },
+   "pq_signatures": 60,
+   "sign_cpu_s": 5.5864480430000185,
+   "sign_events_per_core_s": 15317.246189592766,
+   "sign_cores_needed": 0.0015517911230555606,
+   "wait_ms_p50": 10.0,
+   "wait_ms_p99": 10.0,
+   "wait_ms_max": 10.000000000000014,
+   "pq_wait_ms_p50": 30281.994134897424,
+   "pq_wait_ms_p99": 59411.65441176458,
+   "overhead_bytes_per_event_single_stream_reader": 3283.1507672170997,
+   "partition": "tenant",
+   "deadline_ms": 10,
+   "checkpoint_s": 60
+  },
+  {
+   "label": "anchored 100ms/1s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 398.5796491720132,
+   "overhead_pct_of_payload": 38.200261769769234,
+   "bytes_by_record": {
+    "Seal": 6664164,
+    "Checkpoint": 11602350,
+    "Anchor": 15839548
+   },
+   "records": {
+    "Seal": 85438,
+    "Checkpoint": 3450,
+    "Anchor": 85078
+   },
+   "pq_signatures": 3450,
+   "sign_cpu_s": 9.471914026000036,
+   "sign_events_per_core_s": 9033.971356276717,
+   "sign_cores_needed": 0.0026310872294444546,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 609.8039215686272,
+   "pq_wait_ms_p99": 1100.0,
+   "overhead_bytes_per_event_single_stream_reader": 3742.282555598406,
+   "partition": "tenant",
+   "deadline_ms": 100,
+   "checkpoint_s": 1
+  },
+  {
+   "label": "anchored 100ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 370.4810036344938,
+   "overhead_pct_of_payload": 35.507260215026115,
+   "bytes_by_record": {
+    "Seal": 6664164,
+    "Checkpoint": 1207317,
+    "Anchor": 23830208
+   },
+   "records": {
+    "Seal": 85438,
+    "Checkpoint": 359,
+    "Anchor": 82032
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 6.080284185999972,
+   "sign_events_per_core_s": 14073.190887528755,
+   "sign_cores_needed": 0.0016889678294444365,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 5146.875,
+   "pq_wait_ms_p99": 10023.076923076995,
+   "overhead_bytes_per_event_single_stream_reader": 3594.4711869952903,
+   "partition": "tenant",
+   "deadline_ms": 100,
+   "checkpoint_s": 10
+  },
+  {
+   "label": "anchored 100ms/60s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 393.6551321156026,
+   "overhead_pct_of_payload": 37.728291258893016,
+   "bytes_by_record": {
+    "Seal": 6664164,
+    "Checkpoint": 201780,
+    "Anchor": 26818732
+   },
+   "records": {
+    "Seal": 85438,
+    "Checkpoint": 60,
+    "Anchor": 73518
+   },
+   "pq_signatures": 60,
+   "sign_cpu_s": 5.68926560500006,
+   "sign_events_per_core_s": 15040.429809569263,
+   "sign_cores_needed": 0.001580351556944461,
+   "wait_ms_p50": 100.0,
+   "wait_ms_p99": 100.0,
+   "wait_ms_max": 158.82352941157296,
+   "pq_wait_ms_p50": 30371.994134897424,
+   "pq_wait_ms_p99": 59501.65441176458,
+   "overhead_bytes_per_event_single_stream_reader": 3283.031354813075,
+   "partition": "tenant",
+   "deadline_ms": 100,
+   "checkpoint_s": 60
+  },
+  {
+   "label": "anchored 1000ms/1s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 396.9301382510021,
+   "overhead_pct_of_payload": 38.04217103657296,
+   "bytes_by_record": {
+    "Seal": 6608550,
+    "Checkpoint": 11592261,
+    "Anchor": 15764104
+   },
+   "records": {
+    "Seal": 84725,
+    "Checkpoint": 3447,
+    "Anchor": 84724
+   },
+   "pq_signatures": 3447,
+   "sign_cpu_s": 10.634970187000022,
+   "sign_events_per_core_s": 8046.00280916611,
+   "sign_cores_needed": 0.0029541583852777838,
+   "wait_ms_p50": 1000.0,
+   "wait_ms_p99": 1000.0,
+   "wait_ms_max": 1941.1764705879614,
+   "pq_wait_ms_p50": 1501.9893899203744,
+   "pq_wait_ms_p99": 2000.0,
+   "overhead_bytes_per_event_single_stream_reader": 3726.7202725286024,
+   "partition": "tenant",
+   "deadline_ms": 1000,
+   "checkpoint_s": 1
+  },
+  {
+   "label": "anchored 1000ms/10s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 369.63459897860207,
+   "overhead_pct_of_payload": 35.42613996845712,
+   "bytes_by_record": {
+    "Seal": 6608550,
+    "Checkpoint": 1207317,
+    "Anchor": 23813396
+   },
+   "records": {
+    "Seal": 84725,
+    "Checkpoint": 359,
+    "Anchor": 82002
+   },
+   "pq_signatures": 359,
+   "sign_cpu_s": 5.949472956000022,
+   "sign_events_per_core_s": 14382.61853324402,
+   "sign_cores_needed": 0.0016526313766666728,
+   "wait_ms_p50": 1000.0,
+   "wait_ms_p99": 1000.0,
+   "wait_ms_max": 1941.1764705879614,
+   "pq_wait_ms_p50": 6041.443850267213,
+   "pq_wait_ms_p99": 10923.076923076937,
+   "overhead_bytes_per_event_single_stream_reader": 3592.445733852213,
+   "partition": "tenant",
+   "deadline_ms": 1000,
+   "checkpoint_s": 10
+  },
+  {
+   "label": "anchored 1000ms/60s",
+   "speed": 1,
+   "events": 85569,
+   "overhead_bytes_per_event": 392.98947048580675,
+   "overhead_pct_of_payload": 37.66449359997813,
+   "bytes_by_record": {
+    "Seal": 6608550,
+    "Checkpoint": 201780,
+    "Anchor": 26817386
+   },
+   "records": {
+    "Seal": 84725,
+    "Checkpoint": 60,
+    "Anchor": 73513
+   },
+   "pq_signatures": 60,
+   "sign_cpu_s": 5.090693863999945,
+   "sign_events_per_core_s": 16808.907053932584,
+   "sign_cores_needed": 0.0014140816288888737,
+   "wait_ms_p50": 1000.0,
+   "wait_ms_p99": 1000.0,
+   "wait_ms_max": 1941.1764705879614,
+   "pq_wait_ms_p50": 31267.857142857276,
+   "pq_wait_ms_p99": 60398.80952380947,
+   "overhead_bytes_per_event_single_stream_reader": 3282.1691851020814,
+   "partition": "tenant",
+   "deadline_ms": 1000,
+   "checkpoint_s": 60
+  }
+ ],
+ "model": [
+  {
+   "partition": "firehose",
+   "speed": 1,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 984.0337586062236,
+   "measured_bytes_per_event": 1111.3559116035012
+  },
+  {
+   "partition": "firehose",
+   "speed": 1,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 37.15623372797242,
+   "measured_bytes_per_event": 40.22574764225362
+  },
+  {
+   "partition": "firehose",
+   "speed": 100,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 13.921726076179173,
+   "measured_bytes_per_event": 13.941462445511808
+  },
+  {
+   "partition": "firehose",
+   "speed": 100,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 0.4679435251059329,
+   "measured_bytes_per_event": 0.48566653811543903
+  },
+  {
+   "partition": "type",
+   "speed": 1,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 1598.1679378618685,
+   "measured_bytes_per_event": 1585.1714639647537
+  },
+  {
+   "partition": "type",
+   "speed": 1,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 57.34600192713619,
+   "measured_bytes_per_event": 56.28793137701738
+  },
+  {
+   "partition": "type",
+   "speed": 100,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 108.96228861228535,
+   "measured_bytes_per_event": 106.9492690109736
+  },
+  {
+   "partition": "type",
+   "speed": 100,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 2.7981868187752785,
+   "measured_bytes_per_event": 2.7784361158830886
+  },
+  {
+   "partition": "tenant",
+   "speed": 1,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 3321.4105046572186,
+   "measured_bytes_per_event": 3317.9127254028913
+  },
+  {
+   "partition": "tenant",
+   "speed": 1,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 367.8844776966181,
+   "measured_bytes_per_event": 370.4810036344938
+  },
+  {
+   "partition": "tenant",
+   "speed": 100,
+   "label": "v2 direct 100ms",
+   "predicted_bytes_per_event": 3195.52206612929,
+   "measured_bytes_per_event": 3098.4220687398474
+  },
+  {
+   "partition": "tenant",
+   "speed": 100,
+   "label": "v2 anchored 100ms/10s",
+   "predicted_bytes_per_event": 355.0978060214854,
+   "measured_bytes_per_event": 369.94498007455974
+  }
+ ],
+ "single_event_audit": {
+  "batch_events": 272,
+  "proof_hashes": 9,
+  "bundle_bytes": 3787
+ }
+}

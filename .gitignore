@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+data/
+keys/
+*.pqseal
+*.pem
+*.key
+.env
+.env.*
+.venv/
